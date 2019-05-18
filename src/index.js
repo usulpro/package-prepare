@@ -37,9 +37,6 @@ export const buildArgs = config =>
 
 const args = buildArgs(defaultConfigArgs);
 
-// const args = `--ignore tests,stories,story.jsx,story.js src --out-dir dist --verbose ${otherArgs.join(
-//   ' '
-// )}`;
 const cmd = `${babel} ${args}`;
 shell.echo(chalk.gray(cmd));
 shell.rm('-rf', 'dist');
