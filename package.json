@@ -1,0 +1,28 @@
+{
+  "name": "@usulpro/package-prepare",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "bin": {
+    "package-prepare": "./dist/index.js"
+  },
+  "repository": "https://github.com/UsulPro/package-prepare.git",
+  "author": "Oleg Proskurin <regx@usul.su>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src",
+    "prepare": "node src",
+    "test": "node src"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4"
+  },
+  "peerDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4"
+  }
+}
