@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var path = require('path');
 var shell = require('shelljs');
 var chalk = require('chalk');
@@ -18,9 +20,26 @@ if (otherArgs[0] === '--help' || otherArgs[0] === '-h') {
 }
 if (otherArgs.length) shell.echo(chalk.cyan(`[${otherArgs}]`));
 
-const args = `--ignore tests,stories,story.jsx,story.js src --out-dir dist --verbose ${otherArgs.join(
-  ' '
-)}`;
+export const defaultConfigArgs = {
+  src: [''],
+  '--ignore': ['**/__tests__', 'test.js', 'stories', 'story.jsx', 'story.js'],
+  '--out-dir': ['dist'],
+  '--verbose': [''],
+};
+
+const composeParams = params => params.join(',');
+
+export const buildArgs = config =>
+  Object.entries(config)
+    .map(([key, val]) => `${key} ${composeParams(val)}`)
+    .reduce((acc, str) => `${acc} ${str}`, '')
+    .trim();
+
+const args = buildArgs(defaultConfigArgs);
+
+// const args = `--ignore tests,stories,story.jsx,story.js src --out-dir dist --verbose ${otherArgs.join(
+//   ' '
+// )}`;
 const cmd = `${babel} ${args}`;
 shell.echo(chalk.gray(cmd));
 shell.rm('-rf', 'dist');
