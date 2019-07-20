@@ -1,10 +1,20 @@
 # Package-Prepare
 
-[npm](https://www.npmjs.com/package/@usulpro/package-prepare) [github](https://github.com/UsulPro/package-prepare)
+[npm: `@usulpro/package-prepare`](https://www.npmjs.com/package/@usulpro/package-prepare) 
+
+[github: `package-prepare`](https://github.com/UsulPro/package-prepare)
 
 Opinionately compiles ./src -> ./dist. Zero config
 
-Usage: package-prepare [additional options]
+## Install
+
+```shell
+yarn add --dev @usulpro/package-prepare
+```
+
+## Usage 
+
+ackage-prepare [additional options]
 
 Example:
 
