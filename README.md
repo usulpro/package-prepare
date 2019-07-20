@@ -1,10 +1,18 @@
 # Package-Prepare
 
-[npm: `@usulpro/package-prepare`](https://www.npmjs.com/package/@usulpro/package-prepare) 
+[npm: `@usulpro/package-prepare`](https://www.npmjs.com/package/@usulpro/package-prepare)
 
 [github: `package-prepare`](https://github.com/UsulPro/package-prepare)
 
 Opinionately compiles ./src -> ./dist. Zero config
+
+## Quick start
+
+```shell
+npx @usulpro/package-prepare
+```
+
+it will compile your `src` to `dist` folder
 
 ## Install
 
@@ -12,7 +20,7 @@ Opinionately compiles ./src -> ./dist. Zero config
 yarn add --dev @usulpro/package-prepare
 ```
 
-## Usage 
+## Usage
 
 ackage-prepare [additional options]
 

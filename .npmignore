@@ -1,1 +1,4 @@
-/dist/__tests__
+.vscode
+node_modules
+src
+.babelrc

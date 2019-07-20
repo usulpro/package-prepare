@@ -22,7 +22,7 @@ if (otherArgs.length) shell.echo(chalk.cyan(`[${otherArgs}]`));
 
 export const defaultConfigArgs = {
   src: [''],
-  '--ignore': ['**/__tests__', 'test.js', 'stories', 'story.jsx', 'story.js'],
+  '--ignore': ['**/__tests__', '**/*.test.js', '**/stories', '**/*.story.jsx', '**/*.story.js'],
   '--out-dir': ['dist'],
   '--verbose': [''],
 };
