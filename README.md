@@ -22,7 +22,9 @@ yarn add --dev @usulpro/package-prepare
 
 ## Usage
 
-ackage-prepare [additional options]
+```shell
+package-prepare
+```
 
 Example:
 
@@ -33,6 +35,21 @@ Example:
   }
 }
 ```
+
+Additional options:
+
+
+```json
+{
+  "scripts": {
+    "prepare": "package-prepare"
+  },
+  "packagePrepare": {
+    "src": "src"
+  },
+}
+```
+
 
 ## Credits
 

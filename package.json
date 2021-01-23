@@ -1,6 +1,6 @@
 {
   "name": "@usulpro/package-prepare",
-  "version": "1.1.4",
+  "version": "1.2.1",
   "main": "dist/index.js",
   "bin": {
     "package-prepare": "./dist/index.js"
@@ -10,12 +10,16 @@
   "license": "MIT",
   "scripts": {
     "start": "node src",
-    "prepare": "npx --ignore-existing @usulpro/package-prepare --verbose",
+    "prepare": "npx --ignore-existing @usulpro/package-prepare",
     "test": "node dist",
     "tdd": "jest src --watchAll"
   },
+  "packagePrepare": {
+    "src": "src"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
+    "read-pkg-up": "^7.0.0",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
