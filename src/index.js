@@ -31,6 +31,7 @@ export const defaultConfigArgs = {
     "**/*.story.js",
   ],
   "--out-dir": ["dist"],
+  "--copy-files": [""],
   "--verbose": [""],
 };
 
